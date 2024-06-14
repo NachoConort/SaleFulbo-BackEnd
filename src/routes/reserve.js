@@ -1,7 +1,13 @@
 const { Router } = require('express');
 const router = Router();
+const { getReserves, getReserve, saveReserve, updateReserve, deleteReserve } = require('../controllers/reserve.controller');
 
 router.route('/')
-    .get((req, res) => res.send('Reserve route'))
+    .get(getReserves)
+    .post(saveReserve)
+router.route('/:id')
+    .get(getReserve)
+    .delete(deleteReserve)
+    .put(updateReserve)
 
 module.exports = router;

@@ -18,11 +18,11 @@ const userSchema = new Schema ({
         required: true
     },
     openTime: {
-        type: Date,
+        type: String,
         required: true
     },
     closeTime: {
-        type: Date,
+        type: String,
         required: true
     },
     pricing: {

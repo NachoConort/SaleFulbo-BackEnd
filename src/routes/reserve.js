@@ -4,8 +4,8 @@ const { getReserves, getReserve, saveReserve, updateReserve, deleteReserve } = r
 
 router.route('/')
     .get(getReserves)
-    .post(saveReserve)
 router.route('/:id')
+    .post(saveReserve)
     .get(getReserve)
     .delete(deleteReserve)
     .put(updateReserve)

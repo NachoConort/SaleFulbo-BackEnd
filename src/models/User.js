@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const reserveSchema = require('./Reserve');
 
 const userSchema = new Schema ({
     user: {
@@ -28,6 +29,10 @@ const userSchema = new Schema ({
     pricing: {
         type: Number,
         required: true
+    },
+    reserves: {
+        type: [reserveSchema],
+        default: []
     }
 });
 

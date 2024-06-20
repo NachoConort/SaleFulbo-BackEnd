@@ -17,11 +17,11 @@ const reserveSchema = new Schema ({
         type: String,
         required: true
     },
-    futbol: {
-        type: Number,
+    footballType: {
+        type: String,
         required: true
-    },
-    
+    }
 });
 
 module.exports = model('Reserve', reserveSchema);
+module.exports = reserveSchema;
